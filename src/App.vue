@@ -1,33 +1,16 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        Clientele
-      </div>
-    </v-app-bar>
-
-    <v-main>
-      <Home/>
+  <v-app class="grey lighten-4">
+    <NavBar/>
+    <v-main class="px-5">
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Home from './components/Home';
-
+import NavBar from '@/components/NavBar'
 export default {
-  name: 'App',
-
-  components: {
-    Home,
-  },
-
-  data: () => ({
-    //
-  }),
+  name: "App",
+  components: { NavBar }
 };
 </script>
