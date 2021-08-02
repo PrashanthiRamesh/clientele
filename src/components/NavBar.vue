@@ -34,8 +34,8 @@ export default {
             drawer: false,
             links: [
                 {icon: 'mdi-view-dashboard', text:'Dashboard', route:"/"},
-                {icon: 'mdi-account-star', text:'My Clients', route:"/myclients"},
-                {icon: 'mdi-account-group', text:'All Clients', route:"/allclients"},
+                {icon: 'mdi-account-star', text:'My Clients', route:"/my-clients"},
+                {icon: 'mdi-account-group', text:'All Clients', route:"/all-clients"},
             ]
         }
     },

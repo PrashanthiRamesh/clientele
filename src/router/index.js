@@ -12,12 +12,12 @@ const routes = [
     component: Dashboard
   },
   {
-    path: '/myclients',
+    path: '/my-clients',
     name: 'My Clients',
     component: Clients
   },
   {
-    path: '/allclients',
+    path: '/all-clients',
     name: 'All Clients',
     component: Clients
   }
