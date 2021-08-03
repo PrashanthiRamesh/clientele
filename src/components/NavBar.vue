@@ -1,18 +1,23 @@
 <template>
     <nav>
-        <v-app-bar flat app>
+        <v-app-bar text app>
             <v-app-bar-nav-icon class="grey--text" @click="drawer=!drawer"></v-app-bar-nav-icon>
             <v-toolbar-title class="text-uppercase grey--text">
                 <span class="font-weight-light">Viji</span>
                 <span>Clientele</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn flat color="grey" dark>
+            <v-btn color="grey" dark>
                 <span>Sign Out</span>
                 <v-icon right>mdi-exit-to-app</v-icon>
             </v-btn>
         </v-app-bar>
         <v-navigation-drawer app class="cyan accent-4" v-model="drawer">
+            <v-layout column align-center>
+                <v-flex class="mt-5 mb-5">
+                   <Popup />
+                </v-flex>
+            </v-layout>
             <v-list>
                 <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
                     <v-list-item-action>
@@ -28,7 +33,10 @@
 </template>
 
 <script>
+import Popup from './Popup.vue';
+
 export default {
+    components: { Popup },
     data() {
         return {
             drawer: false,
